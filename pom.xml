@@ -1,0 +1,116 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.zhidui</groupId>
+  <artifactId>SpringBootTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- sringboot的父工程 -->
+  <parent>
+  	<groupId>org.springframework.boot</groupId>
+  	<artifactId>spring-boot-starter-parent</artifactId>
+  	<version>1.5.7.RELEASE</version>
+  </parent>
+  
+  <properties>
+  	<!-- springboot编译JDK版本 -->
+  	<java.version>1.8</java.version>
+  </properties>
+  
+  <dependencies>
+  
+  	<!-- spring核心启动器 -->
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter</artifactId>
+  	</dependency>
+  	
+  	<!-- spring web启动器 -->
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-web</artifactId>
+  	</dependency>
+  	
+  	<dependency>
+　　		<groupId>com.alibaba</groupId>
+　　		<artifactId>easyexcel</artifactId>
+　　		<version>2.1.1</version>
+	</dependency>
+	
+	<dependency>
+　　		<groupId>org.apache.poi</groupId>
+　　		<artifactId>poi</artifactId>
+　　		<version>3.17</version>
+	</dependency>
+  	
+  	<dependency>
+　　		<groupId>org.apache.poi</groupId>
+　　		<artifactId>poi-ooxml</artifactId>
+　　		<version>3.17</version>
+	</dependency>
+  	
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-configuration-processor</artifactId>
+  		<optional>true</optional>
+  	</dependency>
+  	
+  	<!-- 开始thymeleaf模板引擎 -->
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+  	</dependency>
+  	
+  	<!-- 热部署 监控后台代码，变化后自动重启 -->
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-devtools</artifactId>
+  		<scope>runtime</scope>
+  		<!-- 依赖不向下传递 -->
+  		<optional>true</optional>
+  	</dependency>
+  	
+  	<!-- 解决模板严格按照html5标准渲染问题 -->
+  	<dependency>
+  		<groupId>net.sourceforge.nekohtml</groupId>
+  		<artifactId>nekohtml</artifactId>
+  	</dependency>
+  	
+  	<!-- JDBC模板操作数据依赖 -->
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-jdbc</artifactId>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-web</artifactId>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<scope>runtime</scope>
+  	</dependency>
+  	
+  	<!-- mybatis依赖 -->
+  	<dependency>
+  		<groupId>org.mybatis.spring.boot</groupId>
+  		<artifactId>mybatis-spring-boot-starter</artifactId>
+  		<version>1.2.0</version>
+  	</dependency>
+  	
+  </dependencies>
+  
+  <!-- springboot项目打JAR cmd进入jar包所在的位置执行：java -jar [项目jar包.jar] -->
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.springframework.boot</groupId>
+  			<artifactId>spring-boot-maven-plugin</artifactId>
+  		</plugin>
+  	</plugins>
+  </build>
+  
+</project>
